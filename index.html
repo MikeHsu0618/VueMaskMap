@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="css/all.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.css"></link> 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.Default.css"></link> 
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrap" id="app">
+        <aside class="side_nav" >
+            <div class="side_nav_header">
+                <div class="side_nav_date">
+                    <h2>今天星期<span></span></h2>
+                    <h3></h3>
+                    <p class = "odd">身分證末碼為1,3,5,7,9可購買</p>
+                    <p class = "even">身分證末碼為2,4,6,8,0可購買</p>
+                    <p class = "all">所有人都可以購買</p>
+                </div>
+                <div class="searchcontainer">
+                    <div class="search">
+                        <input type="text" class="searchinput" placeholder="搜尋所在縣市、地址、周遭店家名稱等" @keyup.enter="getData" v-model="filterText">
+                        <div id="searchbtn">
+                            <img src="https://stardussky.github.io/F2E/week10/img/search.svg" alt="search" width="20px" @click="getData">
+                          </div>
+                    </div>
+                </div>
+
+
+            </div>
+            
+            <div class="info" >
+                <ul class="list">
+                    <li v-for="(item,key) in Arrfilter" @click="setPosition(item,key)">
+                        <h2>{{item.properties.name}} </h2>
+                        <p>{{item.properties.address}}</p>
+                        <p>{{item.properties.phone}}</p>
+                        <P>口罩販賣時段：{{item.properties.note?item.properties.note:'暫無資料'}}</P>
+                        <div class="masknum">
+                            <div class="adult_masknum">成人口罩 {{item.properties.mask_adult}}</div>
+                            <div class="child_masknum">兒童口罩 {{item.properties.mask_child}}</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <main id="map"></main>
+    </div>
+
+    
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/all.js"></script>
+</body>
+</html>

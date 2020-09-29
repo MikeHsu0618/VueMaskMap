@@ -1,0 +1,241 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body,input,button {
+    font-family: 'Noto Sans TC', 'Roboto', sans-serif;
+}
+
+
+.marker-cluster-small {
+    background-color: rgba(181, 226, 140, 0.6);
+    }
+.marker-cluster-small div {
+    background-color: rgba(110, 204, 57, 0.6);
+    }
+
+.marker-cluster-medium {
+    background-color: rgba(241, 211, 87, 0.6);
+    }
+.marker-cluster-medium div {
+    background-color: rgba(240, 194, 12, 0.6);
+    }
+
+.marker-cluster-large {
+    background-color: rgba(253, 156, 115, 0.6);
+    }
+.marker-cluster-large div {
+    background-color: rgba(241, 128, 23, 0.6);
+    }
+
+.marker-cluster {
+    background-clip: padding-box;
+    border-radius: 20px;
+    }
+.marker-cluster div {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    margin-top: 5px;
+
+    text-align: center;
+    border-radius: 15px;
+    font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
+    }
+.marker-cluster span {
+    line-height: 30px;
+    }
+.wrap{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    font-family: 'Noto Sans TC';
+}
+
+.side_nav {
+    width: 25%;
+    height: 100vh;
+    min-height:150px;
+    min-width: 350px;
+    max-width: 500px;
+    background-color: #fff;
+}
+.side_nav_header {
+    width: 100%;
+    height: 140px;
+    background-color: #73C0D8;
+}
+.side_nav_date {
+        font-weight: normal;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-top: 10px;
+        
+}
+.side_nav_date>h2{
+    font-size: 30px;
+    font-weight: normal !important;
+    color: white;
+}
+.side_nav_date>h2>span{
+    color: yellow;
+    font-weight: 900 !important;
+
+}
+.side_nav_date>h3{
+    margin-left: 70px;
+    padding: 5px;
+    text-align: left;
+letter-spacing: 0px;
+color: #FFFFFF;
+opacity: 1;
+}
+.side_nav_date>p{
+    font-size: 15px;
+    padding-top: 10px;
+    color: gray;
+}
+.odd, .even, .all{
+    display: none;
+}
+.searchcontainer{
+    display:flex;
+    justify-content: center;
+}
+.search{
+    display:flex;
+    justify-content: center;
+    margin: 10px 0;
+    width: 93%;
+    height: 31px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 20px;
+    opacity: 1;
+}
+.searchinput{
+    width:280px;
+    outline: none;
+    border:none;
+}
+.searchinput::-webkit-input-placeholder { 
+    color: grey;
+    font-size:15px;
+
+}
+#searchbtn{
+    padding-top: 5px;
+    cursor: pointer;
+}
+.info{
+    height: calc(100vh - 140px);
+    overflow: auto;
+}
+.list{
+    
+    width: 100%;
+    
+}
+.list>li:hover{
+    background:#f2f2f2;
+  }
+.list>li{
+    padding: 15px;
+    border-bottom:1px solid gray;
+    cursor: pointer;
+}
+
+.list>li>h2{
+    font-size:19px;
+    font-weight:bolder;
+    margin-bottom: 10px;
+}
+small{
+    font-size: 12px;
+    margin-left: 130px;
+    color: gray;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0000004D;
+}
+.list>li>p{
+    font-size:16px;
+    letter-spacing: 0px;
+    color: #666666;
+    margin-bottom:10px;
+}
+.list>li>.masknum{
+    display:flex;
+    justify-content:space-between;
+    font-size: 15px;
+    align-items:center;
+    text-align: center;
+}
+.adult_masknum{
+    width: 130px;
+    border-radius: 16px;
+    background: #73C0D8;
+    padding: 10px 5px;
+    color: white;
+}
+.child_masknum{
+    width: 130px;
+    border-radius: 16px;
+    background: #FFA573;
+    padding: 10px 5px;
+    color: white;
+}
+#map{
+    width:100vw;
+    height: 100vh;
+}
